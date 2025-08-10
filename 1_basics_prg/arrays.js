@@ -50,3 +50,32 @@ console.log(arrayA.splice(1,3)) // modify in existing array
 console.log(arrayA)
 
 
+// use of concat in array
+const arrPrograms = ["Java", "Python", "Go", "Ruby"]
+const arrInstitutes = ["QSpider", "ABC", "BesantTech"]
+
+console.log(arrPrograms.concat(arrInstitutes)); //will append the array elements at the end of the array
+//arrPrograms.push(arrInstitutes); // It will push the entire array as a object 
+//console.log(arrPrograms); // [ 'Java', 'Python', 'Go', 'Ruby', [ 'QSpider', 'ABC', 'BesantTech' ]]
+
+// spread operator in Array --> ... known as spread operator in the JS and it works simillar as concat 
+console.log([...arrPrograms, ...arrInstitutes])
+
+// use of flat function in the array, we use it to simplify multi level array inside array concept
+const arrayInsideArray = [1,2,3,[3,2,1], 9,0,[2,3,[1,9]]];
+console.log(arrayInsideArray); // will print same structure of array
+
+console.log(arrayInsideArray.flat(Infinity)); // we need to provide the depth count of array like how many level of array inside array is present. but if you are not aware then better to use Infinity
+
+// String to array conversion
+console.log(Array.from('826909929'))
+console.log(Array.from('Mithilesh'))
+
+const firstName = "Mithilesh"
+const mobileNumber = 826902937
+const course = "Java"
+
+
+console.log(Array.of(firstName, mobileNumber, course)) //converts multiple values in the array form
+
+
